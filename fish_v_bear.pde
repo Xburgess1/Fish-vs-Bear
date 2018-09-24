@@ -1,7 +1,12 @@
+//holds the info for the fish and bear image
 PImage bear;
 PImage fish;
+
+//holds the value for the fish and bears y location
 int fishY=100;
 int bearY=100;
+
+//booloean variable for pausing the game when a player wins
 boolean a = false;
 
 void setup()
@@ -30,6 +35,7 @@ void draw()
   //sets the image mode to center
   imageMode(CENTER);
   
+  //sets where the fish and bear's starting location
   image(fish,980,fishY,200,180);
   image(bear,1800,bearY,200,180);
 
@@ -53,15 +59,15 @@ void draw()
 
 }
 
-void keyPressed(){
-  
-  //when the a key is pressed the fish moves
+void keyPressed()
+{
+  //when the a key is pressed the fish moves down
   if (key == 'a')
   {
     fishY = fishY+10;
   }
   
-  //when the l key is pressed the bear moves
+  //when the l key is pressed the bear moves down
   if (key == 'l')
   {
     bearY = bearY+10;
